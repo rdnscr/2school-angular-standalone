@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
  */
 import { appRoutes } from './app.routes';
 // Shared module reexporting all external libaries required todo a todo component
-import { SharedModule } from './shared/shared.module';
+
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -20,15 +20,14 @@ import { environment } from '../environments/environment';
   declarations: [AppComponent],
   imports: [BrowserModule,
     BrowserAnimationsModule,
-    SharedModule,
     MatIconModule,
     MatSidenavModule,
     MatToolbarModule,
     RouterModule.forRoot(appRoutes, {
-    useHash: false,
-    preloadingStrategy: NoPreloading,
-    enableTracing: !environment.production
-})],
+        useHash: false,
+        preloadingStrategy: NoPreloading,
+        enableTracing: !environment.production
+    })],
 })
 export class AppModule {
 
