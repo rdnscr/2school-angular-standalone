@@ -18,8 +18,7 @@ import { todoRoutesModule } from './todo.routes';
 
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatSnackBarModule, MatCardModule,
-        MatCheckboxModule, MatListModule, HttpClientModule, FlexLayoutModule, todoRoutesModule],
-    declarations: [TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent, TodoItemComponent]
+        MatCheckboxModule, MatListModule, HttpClientModule, FlexLayoutModule, todoRoutesModule, TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent, TodoItemComponent]
 })
 export class TodoMvcPlusServiceModule {
 
