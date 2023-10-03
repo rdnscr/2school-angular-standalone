@@ -14,6 +14,9 @@ import { appRoutes } from './app.routes';
 // Shared module reexporting all external libaries required todo a todo component
 
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -23,6 +26,9 @@ import { environment } from '../environments/environment';
     MatIconModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatButtonModule,
+    MatListModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes, {
         useHash: false,
         preloadingStrategy: NoPreloading,

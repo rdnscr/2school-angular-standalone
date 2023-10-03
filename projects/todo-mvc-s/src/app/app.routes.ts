@@ -4,7 +4,7 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: 'todo', pathMatch: 'full' },
   {
     path: 'todo',
-    loadChildren: () => import('./todo/todo.module').then(m => m.TodoMvcPlusServiceModule),
+    loadChildren: () => import('./todo/todo.routes').then(m => m.todoRoutes),
     data: { title: 'MVC+S Architecture' }
   }
 ];

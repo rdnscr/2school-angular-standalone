@@ -1,12 +1,15 @@
-import { RouterModule } from '@angular/router';
+import { importProvidersFrom } from '@angular/core';
 import { TodoComponent } from './containers/todo.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-const todoRoutes = [
+export const todoRoutes = [
     {
-        path: '', children: [
+        path: '',
+        providers: [
+          importProvidersFrom(MatSnackBarModule)
+        ],
+        children: [
             { path: '', component: TodoComponent },
         ]
     },
 ];
-
-export const todoRoutesModule = RouterModule.forChild(todoRoutes);
